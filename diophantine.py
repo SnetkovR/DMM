@@ -1,7 +1,6 @@
 import numpy as np
 import sympy as sm
 
-
 class DiophantineEquations():
 
     def __init__(self, filename):
@@ -96,6 +95,7 @@ class DiophantineEquations():
         n_new, eq = self._del_null_and_lin_dep_row()
         B = self._build_matrix_B(n_new=n_new)
         m_new = len(eq)
+
         # Приводим матрицу к виду трапеции
         for i in range(m_new):
             b = [(B[k][i:-1]) for k in range(i, len(B))]
