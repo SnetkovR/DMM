@@ -3,7 +3,7 @@ import sympy as sm
 
 class DiophantineEquations():
 
-    def __init__(self, filename):
+    def __init__(self, filename="input.txt"):
         """
            Считывание входных данных
 
@@ -181,7 +181,7 @@ class DiophantineEquations():
                 was_found = True
         return True
 
-    def _print_and_write_result(self, B, flag='file'):
+    def print_and_write_result(self, B, flag='file'):
         """
         Печать результата на экран или в файл
         :param B: преобразованная матрица с решением уравнения
@@ -197,7 +197,7 @@ class DiophantineEquations():
         else:
             print('Свободные переменные:', str(len(B[0]) - 1))
             for r in B:
-                print(' + t *'.join(map(str,r)))
+                print(' + t *'.join(map(str, r)))
 
 
 
